@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "name": "Classic White Shirt",
+        "price": 49.99,
+        "image": "/images/products/white-shirt.jpg",
+        "mainCategory": "Men",
+        "subCategory": "Shirts",
+        "rating": 4.5,
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["White"],
+        "brand": "Nike"
+    }
+    
+] 

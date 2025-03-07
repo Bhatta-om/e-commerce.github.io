@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these custom styles for the mega menu */
+.absolute.w-screen {
+    animation: slideDown 0.2s ease-out;
+}
+::-webkit-scrollbar{
+  display:none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Custom scrollbar for long category lists */
+.max-w-md {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.max-w-md::-webkit-scrollbar {
+    width: 4px;
+}
+
+.max-w-md::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.max-w-md::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+.max-w-md::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Add this to your CSS */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+}
+
+.login-container {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Add to your existing CSS */
+.group:hover .hover\:rounded-full {
+  border-radius: 9999px;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+  min-width: 400px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-spacing {
+  padding: 2.5rem;
+  margin: 1rem;
+}
+
+.shadow-glow:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* New CSS for forced-color mode */
+@media (forced-colors: active) {
+  body {
+    background-color: Window;
+    color: WindowText;
+  }
+
+  .absolute.w-screen {
+    background-color: Canvas;
+    color: CanvasText;
+  }
+
+  .max-w-md {
+    scrollbar-color: HighlightText Highlight;
+  }
+
+  .login-container {
+    background-color: Canvas;
+    color: CanvasText;
+  }
+
+  .group:hover .hover\:rounded-full {
+    border-color: Highlight;
+  }
+
+  .animate-fadeIn {
+    background-color: Canvas;
+    color: CanvasText;
+  }
+
+  .login-spacing {
+    background-color: Canvas;
+    color: CanvasText;
+  }
+
+  .shadow-glow:hover {
+    box-shadow: 0 0 20px Highlight;
+  }
+}
+
+/* In your global CSS file */
+.nav-link {
+  @apply text-gray-700 hover:text-blue-500 transition-colors duration-300 font-medium;
+}
+
+.nav-button {
+  @apply px-4 py-2 rounded-full hover:opacity-90 transition-opacity;
+}
