@@ -15,20 +15,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['jwt-decode']
   },
-  server: {
-    proxy: {
-      '/auth': {
-        target: 'https://zd88bbhd-5000.inc1.devtunnels.ms',
-        changeOrigin: true,
-        secure: false
-      },
-      '/api': {
-        target: 'https://zd88bbhd-5000.inc1.devtunnels.ms',
-        changeOrigin: true,
-        secure: false
-      }
-    }
-  }
 })
 
 
