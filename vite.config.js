@@ -6,15 +6,13 @@ export default defineConfig({
   base: '/e-commerce.github.io/',
   build: {
     assetsDir: 'assets',
+    outDir: 'dist',
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[name].[ext]'
       }
     }
-  },
-  optimizeDeps: {
-    include: ['jwt-decode']
-  },
+  }
 })
 
 
